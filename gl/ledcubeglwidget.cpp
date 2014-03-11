@@ -40,13 +40,13 @@ void LEDCubeGLWidget::paintGL() {
         glBegin(GL_LINES);
         for(float i = 0.0; i < 5.0; i += 1.0) {
             for(float j = 0.0; j < 5.0; j += 1.0) {
-                glVertex3f(0.0, i, j);
-                glVertex3f(4.0, i, j);
+                glVertex3f(i, j, 0.0);
+                glVertex3f(i, j, 4.0);
                 glVertex3f(i, -1.0, j);
                 glVertex3f(i,  4.0, j);
                 if(!((int)i%4)){
-                    glVertex3f(i, j, 0.0);
-                    glVertex3f(i, j, 4.0);
+                    glVertex3f(0.0, j, i);
+                    glVertex3f(4.0, j, i);
                 }
             }
         }
