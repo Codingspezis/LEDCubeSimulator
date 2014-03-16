@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = LEDCubeSimulator
 TEMPLATE = app
 
+CONFIG += debug_and_release
 
 SOURCES += main.cpp \
     gl/ledcubeglwidget.cpp \
